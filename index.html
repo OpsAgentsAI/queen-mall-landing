@@ -3,27 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queen Mall — Shop · Dine · Discover</title>
-  <meta name="description" content="Queen Mall — a premium shopping, dining and lifestyle destination. Discover stores, restaurants and experiences under one royal roof." />
-  <meta property="og:title" content="Queen Mall — Shop · Dine · Discover" />
-  <meta property="og:description" content="A premium shopping, dining and lifestyle destination." />
+  <title>Queen Mall — Virtual Shopping Mall · Coming Soon</title>
+  <meta name="description" content="Queen Mall — a new virtual shopping mall, coming soon. Your favourite brands in one elegant online destination. Proudly closed on Shabbat and Jewish holidays." />
+  <meta property="og:title" content="Queen Mall — Virtual Shopping Mall · Coming Soon" />
+  <meta property="og:description" content="A new virtual shopping mall, coming soon. Closed on Shabbat and Jewish holidays." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --royal: #4A2A6B;        /* deep royal purple */
-      --royal-dark: #2E1A45;
-      --royal-soft: #6B4A8F;
-      --gold: #C9A227;
-      --gold-light: #E6C75A;
-      --cream: #FBF8F3;
-      --ink: #20142E;
-      --gray: #6B6478;
-      --line: rgba(74,42,107,.12);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Inter', system-ui, sans-serif;
+      --royal: #4A2A6B; --royal-dark: #2E1A45; --royal-soft: #6B4A8F;
+      --gold: #C9A227; --gold-light: #E6C75A;
+      --cream: #FBF8F3; --ink: #20142E; --gray: #6B6478; --line: rgba(74,42,107,.12);
+      --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
     }
     html[dir="rtl"] { --sans: 'Heebo', system-ui, sans-serif; }
     html[dir="rtl"] .serif { font-family: 'Heebo', sans-serif; font-weight: 800; }
@@ -33,30 +26,30 @@
     .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
     a { color: inherit; text-decoration: none; }
 
-    /* Top bar */
     header { position: sticky; top: 0; z-index: 50; background: rgba(251,248,243,.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
     .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--royal); }
     .crown { width: 30px; height: 30px; flex: none; }
-    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
     .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--ink); opacity: .8; transition: .2s; }
     .nav-links a:hover { opacity: 1; color: var(--royal); }
     .lang { border: 1px solid var(--royal); color: var(--royal); background: transparent; border-radius: 999px; padding: 7px 16px; font-family: var(--sans); font-size: 13.5px; font-weight: 600; cursor: pointer; transition: .2s; }
     .lang:hover { background: var(--royal); color: #fff; }
     @media (max-width: 820px) { .nav-links a:not(.lang) { display: none; } }
 
-    /* Hero */
     .hero { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--royal-dark) 0%, var(--royal) 55%, var(--royal-soft) 100%); color: #fff; }
     .hero::after { content: ""; position: absolute; inset: 0; background:
         radial-gradient(900px 420px at 80% -10%, rgba(201,162,39,.28), transparent 60%),
         radial-gradient(700px 500px at 0% 110%, rgba(230,199,90,.14), transparent 55%); }
-    .hero .wrap { position: relative; z-index: 2; padding: 92px 24px 100px; text-align: center; }
-    .eyebrow { display: inline-block; letter-spacing: 3px; text-transform: uppercase; font-size: 12.5px; font-weight: 600; color: var(--gold-light); margin-bottom: 22px; }
-    html[dir="rtl"] .eyebrow { letter-spacing: 1px; }
-    .hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 7vw, 78px); line-height: 1.05; margin-bottom: 20px; }
+    .hero .wrap { position: relative; z-index: 2; padding: 84px 24px 96px; text-align: center; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(230,199,90,.5); color: var(--gold-light); border-radius: 999px; padding: 7px 16px; font-size: 12.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; }
+    html[dir="rtl"] .pill { letter-spacing: .5px; }
+    .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-light); box-shadow: 0 0 0 0 rgba(230,199,90,.6); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(230,199,90,.55);} 70% { box-shadow: 0 0 0 8px rgba(230,199,90,0);} 100% { box-shadow: 0 0 0 0 rgba(230,199,90,0);} }
+    .hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 7vw, 76px); line-height: 1.05; margin-bottom: 20px; }
     html[dir="rtl"] .hero h1 { font-family: 'Heebo'; font-weight: 800; line-height: 1.15; }
     .hero h1 .accent { color: var(--gold-light); }
-    .hero p { max-width: 600px; margin: 0 auto 34px; font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,.86); font-weight: 300; }
+    .hero p { max-width: 620px; margin: 0 auto 34px; font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,.86); font-weight: 300; }
     .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer; transition: .22s; border: 1px solid transparent; }
     .btn-gold { background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--royal-dark); }
@@ -64,14 +57,13 @@
     .btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; }
     .btn-ghost:hover { background: rgba(255,255,255,.1); }
 
-    /* Stats strip */
     .strip { background: var(--royal-dark); color: #fff; }
-    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 26px 24px; text-align: center; }
-    .strip .n { font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--gold-light); }
-    .strip .l { font-size: 13px; opacity: .8; letter-spacing: .5px; }
+    .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 30px 24px; text-align: center; }
+    .strip .n { font-family: var(--serif); font-size: 23px; font-weight: 700; color: var(--gold-light); }
+    html[dir="rtl"] .strip .n { font-family: 'Heebo'; font-weight: 800; }
+    .strip .l { font-size: 13px; opacity: .8; letter-spacing: .3px; margin-top: 2px; }
     @media (max-width: 720px) { .strip .wrap { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
 
-    /* Sections */
     section.block { padding: 86px 0; }
     .head { text-align: center; max-width: 640px; margin: 0 auto 54px; }
     .head .tag { color: var(--gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 12.5px; }
@@ -88,7 +80,6 @@
     .card h3 { font-size: 21px; font-weight: 600; color: var(--royal); margin-bottom: 8px; }
     .card p { color: var(--gray); font-size: 15.5px; }
 
-    /* Visit */
     .visit { background: linear-gradient(180deg, #fff, var(--cream)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .visit .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
     @media (max-width: 880px) { .visit .grid2 { grid-template-columns: 1fr; gap: 30px; } }
@@ -106,18 +97,15 @@
     html[dir="rtl"] .panel h3 { font-family: 'Heebo'; font-weight: 800; }
     .panel p { color: rgba(255,255,255,.85); position: relative; font-weight: 300; }
 
-    /* Footer */
     footer { background: var(--royal-dark); color: rgba(255,255,255,.8); padding: 50px 0 30px; }
     .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
     .foot .brand { color: #fff; }
     .foot small { font-size: 13px; opacity: .65; }
     .preview-note { text-align: center; font-size: 12px; opacity: .5; margin-top: 24px; }
-
     [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-  <!-- crown svg symbol -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="crown" viewBox="0 0 24 24">
       <path d="M3 18h18l1.2-9.5-5.2 3.2L12 4l-5 7.7-5.2-3.2L3 18z" fill="currentColor"/>
@@ -127,14 +115,11 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#">
-        <svg class="crown" style="color:var(--gold)"><use href="#crown"/></svg>
-        Queen&nbsp;Mall
-      </a>
+      <a class="brand" href="#"><svg class="crown" style="color:var(--gold)"><use href="#crown"/></svg> Queen&nbsp;Mall</a>
       <nav class="nav-links">
-        <a href="#shop" data-en="Shopping" data-he="קניות">Shopping</a>
-        <a href="#dine" data-en="Dining" data-he="מסעדות">Dining</a>
-        <a href="#visit" data-en="Visit" data-he="ביקור">Visit</a>
+        <a href="#about" data-en="About" data-he="אודות">About</a>
+        <a href="#values" data-en="Shomer Shabbat" data-he="שומר שבת">Shomer Shabbat</a>
+        <a href="#launch" data-en="Launch" data-he="השקה">Launch</a>
         <button class="lang" id="langBtn" onclick="toggleLang()">עברית</button>
       </nav>
     </div>
@@ -143,78 +128,78 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow" data-en="A Royal Shopping Destination" data-he="חוויית קניות מלכותית">A Royal Shopping Destination</span>
-      <h1 data-en='Where every visit feels<br><span class="accent">like royalty.</span>'
-          data-he='כל ביקור כאן<br><span class="accent">מרגיש כמו מלוכה.</span>'>
-        Where every visit feels<br><span class="accent">like royalty.</span>
+      <span class="pill"><span class="dot"></span><span data-en="Virtual Mall · Under Construction" data-he="קניון וירטואלי · בהקמה">Virtual Mall · Under Construction</span></span>
+      <h1 data-en='Shop like a queen —<br><span class="accent">soon, online.</span>'
+          data-he='לקנות כמו מלכה —<br><span class="accent">בקרוב, אונליין.</span>'>
+        Shop like a queen —<br><span class="accent">soon, online.</span>
       </h1>
-      <p data-en="Queen Mall brings together leading fashion, dining and lifestyle brands under one elegant roof — a place to shop, meet and unwind."
-         data-he="קווין מול מאחד את מותגי האופנה, הקולינריה והלייפסטייל המובילים תחת קורת גג אחת אלגנטית — מקום לקנות, להיפגש ולהתרווח.">
-        Queen Mall brings together leading fashion, dining and lifestyle brands under one elegant roof — a place to shop, meet and unwind.
+      <p data-en="Queen Mall is a new virtual shopping mall, bringing your favourite brands together in one elegant online destination — and proudly closed on Shabbat and Jewish holidays."
+         data-he="קווין מול הוא קניון וירטואלי חדש, שמאחד את המותגים האהובים עליכם ביעד קניות אונליין אחד ואלגנטי — וסגור בגאווה בשבת ובחגי ישראל.">
+        Queen Mall is a new virtual shopping mall, bringing your favourite brands together in one elegant online destination — and proudly closed on Shabbat and Jewish holidays.
       </p>
       <div class="cta-row">
-        <a class="btn btn-gold" href="#shop" data-en="Explore the Mall" data-he="גלו את המול">Explore the Mall</a>
-        <a class="btn btn-ghost" href="#visit" data-en="Plan your visit" data-he="תכננו ביקור">Plan your visit</a>
+        <a class="btn btn-gold" href="#launch" data-en="Notify me at launch" data-he="עדכנו אותי בהשקה">Notify me at launch</a>
+        <a class="btn btn-ghost" href="#about" data-en="Learn more" data-he="גלו עוד">Learn more</a>
       </div>
     </div>
   </section>
 
-  <!-- STRIP -->
+  <!-- STRIP (value props) -->
   <div class="strip">
     <div class="wrap">
-      <div><div class="n">120+</div><div class="l" data-en="Stores & Brands" data-he="חנויות ומותגים">Stores & Brands</div></div>
-      <div><div class="n">25+</div><div class="l" data-en="Restaurants & Cafés" data-he="מסעדות ובתי קפה">Restaurants & Cafés</div></div>
-      <div><div class="n">7</div><div class="l" data-en="Days a Week" data-he="ימים בשבוע">Days a Week</div></div>
-      <div><div class="n">∞</div><div class="l" data-en="Moments to Enjoy" data-he="רגעים ליהנות">Moments to Enjoy</div></div>
+      <div><div class="n" data-en="Virtual" data-he="וירטואלי">Virtual</div><div class="l" data-en="Shop from anywhere" data-he="קונים מכל מקום">Shop from anywhere</div></div>
+      <div><div class="n" data-en="Curated" data-he="נבחר">Curated</div><div class="l" data-en="Brands you love" data-he="מותגים אהובים">Brands you love</div></div>
+      <div><div class="n" data-en="Shomer Shabbat" data-he="שומר שבת">Shomer Shabbat</div><div class="l" data-en="Closed Shabbat & holidays" data-he="סגור בשבת ובחגים">Closed Shabbat & holidays</div></div>
+      <div><div class="n" data-en="Coming Soon" data-he="בקרוב">Coming Soon</div><div class="l" data-en="Be first to know" data-he="השאירו פרטים">Be first to know</div></div>
     </div>
   </div>
 
-  <!-- SHOP -->
-  <section class="block" id="shop">
+  <!-- ABOUT -->
+  <section class="block" id="about">
     <div class="wrap">
       <div class="head">
-        <span class="tag" data-en="What's Inside" data-he="מה יש בפנים">What's Inside</span>
-        <h2 data-en="A world of brands, beautifully arranged" data-he="עולם של מותגים, בעיצוב מוקפד">A world of brands, beautifully arranged</h2>
-        <p data-en="From everyday essentials to flagship boutiques — discover everything in one effortless visit." data-he="מהמוצרים היומיומיים ועד הבוטיקים המובילים — מצאו הכול בביקור אחד נוח.">From everyday essentials to flagship boutiques — discover everything in one effortless visit.</p>
+        <span class="tag" data-en="What to Expect" data-he="למה לצפות">What to Expect</span>
+        <h2 data-en="A mall reimagined for online" data-he="קניון בתפיסה חדשה — אונליין">A mall reimagined for online</h2>
+        <p data-en="One elegant destination for the brands you love — designed to be simple, beautiful and values-driven." data-he="יעד אחד ואלגנטי למותגים שאתם אוהבים — פשוט, יפה ומבוסס ערכים.">One elegant destination for the brands you love — designed to be simple, beautiful and values-driven.</p>
       </div>
       <div class="grid">
         <div class="card">
           <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-          <h3 data-en="Fashion & Style" data-he="אופנה וסטייל">Fashion & Style</h3>
-          <p data-en="Leading local and international fashion houses, footwear and accessories for the whole family." data-he="בתי אופנה מקומיים ובינלאומיים מובילים, הנעלה ואקססוריז לכל המשפחה.">Leading local and international fashion houses, footwear and accessories for the whole family.</p>
+          <h3 data-en="One destination, many brands" data-he="יעד אחד, הרבה מותגים">One destination, many brands</h3>
+          <p data-en="Fashion, home and lifestyle — brought together in a single, beautifully organised online mall." data-he="אופנה, בית ולייפסטייל — מתאחדים בקניון אונליין אחד, מסודר ויפה.">Fashion, home and lifestyle — brought together in a single, beautifully organised online mall.</p>
         </div>
-        <div class="card" id="dine">
-          <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2"/><path d="M5 2v20"/><path d="M19 2c-2 0-3 2-3 5s1 5 3 5"/><path d="M19 12v10"/></svg></div>
-          <h3 data-en="Dining & Cafés" data-he="מסעדות ובתי קפה">Dining & Cafés</h3>
-          <p data-en="From a quick coffee to a relaxed family meal — a curated selection of restaurants and cafés." data-he="מקפה מהיר ועד ארוחה משפחתית נינוחה — מבחר מוקפד של מסעדות ובתי קפה.">From a quick coffee to a relaxed family meal — a curated selection of restaurants and cafés.</p>
+        <div class="card" id="values">
+          <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 data-en="Shomer Shabbat" data-he="שומר שבת">Shomer Shabbat</h3>
+          <p data-en="Queen Mall is closed on Shabbat and all Jewish holidays — shop with brands that share your values." data-he="קווין מול סגור בשבת ובכל חגי ישראל — לקנות במקום ששומר על הערכים שלכם.">Queen Mall is closed on Shabbat and all Jewish holidays — shop with brands that share your values.</p>
         </div>
         <div class="card">
-          <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg></div>
-          <h3 data-en="Services & Lifestyle" data-he="שירותים ולייפסטייל">Services & Lifestyle</h3>
-          <p data-en="Beauty, wellness, electronics and everyday services — convenience designed around you." data-he="יופי, בריאות, אלקטרוניקה ושירותים יומיומיים — נוחות שתוכננה סביבכם.">Beauty, wellness, electronics and everyday services — convenience designed around you.</p>
+          <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.9 4.9 2.8 2.8"/><path d="m16.3 16.3 2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/></svg></div>
+          <h3 data-en="Built with care" data-he="נבנה בקפידה">Built with care</h3>
+          <p data-en="We're under construction now and putting on the finishing touches. Launching soon — we can't wait to welcome you." data-he="אנחנו בהקמה כעת ומוסיפים את הגימור האחרון. בקרוב באוויר — מחכים לארח אתכם.">We're under construction now and putting on the finishing touches. Launching soon — we can't wait to welcome you.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VISIT -->
-  <section class="block visit" id="visit">
+  <!-- LAUNCH -->
+  <section class="block visit" id="launch">
     <div class="wrap grid2">
       <div>
-        <span class="tag" style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:12.5px" data-en="Plan Your Visit" data-he="תכננו את הביקור">Plan Your Visit</span>
-        <h2 data-en="We can't wait to welcome you" data-he="נשמח לארח אתכם">We can't wait to welcome you</h2>
+        <span class="tag" style="color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:12.5px" data-en="Launching Soon" data-he="בקרוב">Launching Soon</span>
+        <h2 data-en="Be first through the gates" data-he="היו הראשונים להיכנס">Be first through the gates</h2>
         <ul class="info-list">
-          <li><span class="k" data-en="Opening hours" data-he="שעות פתיחה">Opening hours</span><span class="v" data-en="Sun–Thu · 09:30–22:00" data-he="א׳–ה׳ · 09:30–22:00">Sun–Thu · 09:30–22:00</span></li>
-          <li><span class="k" data-en="Weekend" data-he="סוף שבוע">Weekend</span><span class="v" data-en="Fri 09:00–15:00 · Sat after Shabbat" data-he="ו׳ 09:00–15:00 · מוצ״ש">Fri 09:00–15:00 · Sat after Shabbat</span></li>
-          <li><span class="k" data-en="Parking" data-he="חניה">Parking</span><span class="v" data-en="Free on-site parking for visitors" data-he="חניה חינם לבאי המול">Free on-site parking for visitors</span></li>
-          <li><span class="k" data-en="Accessibility" data-he="נגישות">Accessibility</span><span class="v" data-en="Fully accessible throughout" data-he="המתחם נגיש לחלוטין">Fully accessible throughout</span></li>
+          <li><span class="k" data-en="Format" data-he="פורמט">Format</span><span class="v" data-en="Virtual shopping mall — online" data-he="קניון וירטואלי — אונליין">Virtual shopping mall — online</span></li>
+          <li><span class="k" data-en="Open" data-he="פתוח">Open</span><span class="v" data-en="Sun–Thu, and Fri until candle-lighting" data-he="א׳–ה׳, ו׳ עד הדלקת נרות">Sun–Thu, and Fri until candle-lighting</span></li>
+          <li><span class="k" data-en="Closed" data-he="סגור">Closed</span><span class="v" data-en="Shabbat & all Jewish holidays" data-he="בשבת ובכל חגי ישראל">Shabbat & all Jewish holidays</span></li>
+          <li><span class="k" data-en="Status" data-he="סטטוס">Status</span><span class="v" data-en="Under construction — launching soon" data-he="בהקמה — בקרוב באוויר">Under construction — launching soon</span></li>
         </ul>
       </div>
       <div class="panel">
         <svg class="crown-big" style="color:var(--gold-light)"><use href="#crown"/></svg>
-        <h3 data-en="Become a guest of honour" data-he="הצטרפו כאורחים של כבוד">Become a guest of honour</h3>
-        <p data-en="Be first to hear about new stores, events and seasonal offers at Queen Mall. We'd love to stay in touch." data-he="היו הראשונים לשמוע על חנויות חדשות, אירועים ומבצעים עונתיים בקווין מול. נשמח להישאר בקשר.">Be first to hear about new stores, events and seasonal offers at Queen Mall. We'd love to stay in touch.</p>
-        <a class="btn btn-gold" style="margin-top:24px" href="#" data-en="Stay in touch" data-he="להישאר בקשר">Stay in touch</a>
+        <h3 data-en="Be first to know" data-he="היו הראשונים לדעת">Be first to know</h3>
+        <p data-en="Leave your details and we'll let you know the moment Queen Mall opens its gates — plus first access to launch offers." data-he="השאירו פרטים ונעדכן אתכם ברגע שקווין מול נפתח — כולל גישה ראשונה למבצעי ההשקה.">Leave your details and we'll let you know the moment Queen Mall opens its gates — plus first access to launch offers.</p>
+        <a class="btn btn-gold" style="margin-top:24px" href="#" data-en="Notify me" data-he="עדכנו אותי">Notify me</a>
       </div>
     </div>
   </section>
@@ -223,9 +208,9 @@
     <div class="wrap">
       <div class="foot">
         <a class="brand" href="#"><svg class="crown" style="color:var(--gold)"><use href="#crown"/></svg> Queen&nbsp;Mall</a>
-        <small data-en="© 2026 Queen Mall. Shop · Dine · Discover." data-he="© 2026 קווין מול. קניות · מסעדות · חוויות.">© 2026 Queen Mall. Shop · Dine · Discover.</small>
+        <small data-en="© 2026 Queen Mall · Virtual shopping, coming soon · Closed Shabbat & Jewish holidays" data-he="© 2026 קווין מול · קניון וירטואלי, בקרוב · סגור בשבת ובחגי ישראל">© 2026 Queen Mall · Virtual shopping, coming soon · Closed Shabbat & Jewish holidays</small>
       </div>
-      <div class="preview-note" data-en="Preview landing page." data-he="עמוד נחיתה לדוגמה.">Preview landing page.</div>
+      <div class="preview-note" data-en="Preview landing page — under construction." data-he="עמוד נחיתה לדוגמה — בהקמה.">Preview landing page — under construction.</div>
     </div>
   </footer>
 
@@ -238,13 +223,10 @@
         var v = el.getAttribute('data-' + lang);
         if (v != null) el.innerHTML = v;
       });
-      var btn = document.getElementById('langBtn');
-      btn.textContent = rtl ? 'English' : 'עברית';
+      document.getElementById('langBtn').textContent = rtl ? 'English' : 'עברית';
       try { localStorage.setItem('qm_lang', lang); } catch (e) {}
     }
-    function toggleLang() {
-      applyLang(document.documentElement.dir === 'rtl' ? 'en' : 'he');
-    }
+    function toggleLang() { applyLang(document.documentElement.dir === 'rtl' ? 'en' : 'he'); }
     (function () {
       var saved = null; try { saved = localStorage.getItem('qm_lang'); } catch (e) {}
       var nav = (navigator.language || '').toLowerCase().startsWith('he') ? 'he' : 'en';
